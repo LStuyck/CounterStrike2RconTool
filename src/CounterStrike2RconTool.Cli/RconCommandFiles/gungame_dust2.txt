@@ -1,0 +1,5 @@
+game_type 1
+game_mode 0
+mp_warmuptime 60
+map de_dust2
+mp_restartgame 1

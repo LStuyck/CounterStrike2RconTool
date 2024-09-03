@@ -1,0 +1,3 @@
+mp_warmuptime 60
+mp_restartgame 1
+map de_nuke

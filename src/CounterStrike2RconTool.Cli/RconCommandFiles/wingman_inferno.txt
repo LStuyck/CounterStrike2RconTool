@@ -1,0 +1,5 @@
+game_type 0
+game_mode 2
+mp_warmuptime 30
+map de_inferno
+mp_restartgame 1

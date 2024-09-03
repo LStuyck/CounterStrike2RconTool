@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "RCONWrapper": {
+      "commandName": "Project",
+      //"commandLineArgs": "exec --command \"bot_add_ct; bot_add_ct;\" --ip \"172.30.240.1\" --port 27015 --password \"1234\"",
+      //"commandLineArgs": "readfile"
+      "commandLineArgs": "updateinfo --ip \"172.30.240.1\" --port 27015 --password \"1234\""
+    }
+  }
+}

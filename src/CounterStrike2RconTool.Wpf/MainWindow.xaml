@@ -1,0 +1,106 @@
+﻿<Window x:Class="CounterStrike2RconTool.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CounterStrike2RconTool.Wpf"
+        mc:Ignorable="d"
+        Title="CS2 RCON Tool UI" Height="500" Width="800" Icon="/icon.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label>Ip:</Label>
+                <TextBox x:Name="ipTb" Width="100px"></TextBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label>Port:</Label>
+                <TextBox x:Name="portTb" Width="100px"></TextBox>
+            </StackPanel>
+
+
+            <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label>Password:</Label>
+                <TextBox x:Name="passwordTb" Width="100px"></TextBox>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <CheckBox x:Name="rconConnectedCb" IsEnabled="False">Connected</CheckBox>
+                <CheckBox x:Name="rconAuthenticatedCb" IsEnabled="False">Authenticated</CheckBox>
+                <Button x:Name="connectRconBtn" Click="connectRconBtn_Click">Connect</Button>
+            </StackPanel>
+
+            
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label>Map:</Label>
+                <ComboBox x:Name="mapsCb" IsEnabled="False"/>
+                <Button x:Name="changeMapBtn" Click="changeMapBtn_Click" IsEnabled="False">Change map</Button>
+            </StackPanel>
+
+            <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label>Game mode:</Label>
+                <ComboBox x:Name="gameModesCb" IsEnabled="False"/>
+                <Button x:Name="changeGameModeBtn" IsEnabled="False" Click="changeGameModeBtn_Click">Change game mode</Button>
+            </StackPanel>
+
+
+            <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button x:Name="restartGameBtn" IsEnabled="False" Click="restartGameBtn_Click">Restart game</Button>
+            </StackPanel>
+
+            <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button x:Name="addBotCtBtn" IsEnabled="False" Click="addBotCtBtn_Click">Add CT Bot</Button>
+                <Button x:Name="addBotTBtn" IsEnabled="False" Click="addBotTBtn_Click">Add T Bot</Button>
+                <Button x:Name="kickAllBotsBtn" IsEnabled="False" Click="kickAllBotsBtn_Click">Kick all bots</Button>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="0">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label>Manual command:</Label>
+                <TextBox x:Name="manualCommandTb" Width="300px" IsEnabled="False"></TextBox>
+                <Button x:Name="sendManualCommandBtn" Click="sendManualCommandBtn_Click" IsEnabled="False">Send command</Button>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label>Server output:</Label>
+                <TextBox x:Name="logOutputTb" Width="350px" Height="200" IsEnabled="False" TextWrapping="Wrap"></TextBox>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>
