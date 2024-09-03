@@ -22,6 +22,16 @@ Add following line
 
 "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\cs2.exe" -dedicated -maxplayers 16 -maxplayers_override 16 -usercon +game_type 0 +game_mode 1 +map de_inferno +ip 0.0.0.0
 
+## Tools
+
+### Description
+
+This repository contains 2 tools
+- CLI
+- UI
+
+They work independently, use the one you want.
+
 ---
 ---
 
@@ -29,7 +39,11 @@ Add following line
 
 ### Download 
 
-Download latest release of the program from the releases page of this repo [here](https://github.com/LStuyck/RconWrapper.WPF/releases).
+Download latest release of the program from the releases page of this repo [here](https://github.com/LStuyck/CounterStrike2RconTool/releases).
+
+UI-win-x64.zip 
+
+Unzip and start CounterStrike2RconTool.Wpf.exe
 
 ### Usage
 
@@ -71,6 +85,14 @@ You can execute several commands at once, they have to be "; " separated.
 ---
 
 ## CLI Guide
+
+### Download 
+
+Download latest release of the program from the releases page of this repo [here](https://github.com/LStuyck/CounterStrike2RconTool/releases).
+
+CLI-win-x64.zip 
+
+Unzip and .\CounterStrike2RconTool.Cli.exe
 
 ### Commands
 
